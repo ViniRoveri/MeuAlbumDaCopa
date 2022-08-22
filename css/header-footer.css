@@ -1,0 +1,38 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    align-items: center;
+    background: linear-gradient(-90deg,rgb(108,29,69)50%,rgb(228, 203, 216));
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo{
+    width: 188px
+}
+
+.logo img{
+    width: 100%
+}
+
+footer{
+    background: rgb(24, 7, 14);
+    color: #888;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer p{
+    padding-bottom: 20px;
+}
+
+footer img{
+    width:188px;
+}
+
+footer p:before{
+    content: "© "
+}

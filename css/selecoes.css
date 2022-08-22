@@ -1,0 +1,93 @@
+main{
+    padding: 2rem 5%;
+}
+
+main > h1{
+    color: #222;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.selecao{
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card{
+    align-items: center;
+    background: red;
+    border-radius: 8px;
+    box-shadow: darkred 2px 2px;
+    color: #eee;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    margin: 8px;
+    width: 69px;
+}
+
+.total h1{
+    color: #222;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.total h2{
+    color: darkgreen;
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tenho{
+    background: green; 
+    box-shadow: darkgreen 2px 2px;
+}
+
+@media(min-width:1169px){
+    main{
+        padding: 2rem 22%;
+    }
+}
+
+@media(min-width:1440px){
+    main{
+        padding: 2rem 28%;
+    }
+}
+
+@media(max-width:505px){
+    .total h1{
+        font-size: 50px;
+    }
+}
+
+@media(max-width:425px){
+    main > h1{
+        font-size: 50px;
+    }
+    
+    .total h1{
+        font-size: 44px;
+    }
+}
+
+@media(max-width:375px){
+    .total h1{
+        font-size: 38px;
+    }
+}
+
+@media(max-width:320px){
+    .total h1{
+        font-size: 36px;
+    }
+}
