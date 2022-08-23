@@ -8,6 +8,7 @@ main > h1{
     font-weight: bold;
     margin-bottom: 2rem;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .selecao{
@@ -37,6 +38,7 @@ main > h1{
     font-weight: bold;
     margin-bottom: 2rem;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .total h2{
