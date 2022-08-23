@@ -11,7 +11,12 @@ header{
 }
 
 .logo{
+    transition: all 0.4s;
     width: 188px
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 .logo img{
@@ -35,4 +40,8 @@ footer img{
 
 footer p:before{
     content: "© "
+}
+
+main{
+    box-shadow: inset 0px 20px 20px -20px rgb(24, 7, 14);
 }

@@ -38,3 +38,45 @@ pesquisa.addEventListener('input',function(){
 
 const tenho = total()
 document.querySelector('.total').querySelector('h2').textContent = tenho + '/678'
+
+// BOTÃO DE VOLTAR AO TOPO
+
+const botaoTopo = document.querySelector(".botao-topo");
+botaoTopo.addEventListener('click',topo)
+
+document.addEventListener('scroll', function(){
+    if (window.scrollY > 500) {
+        botaoTopo.style.visibility = "visible";
+    } else {
+        botaoTopo.style.visibility = "hidden";
+    } 
+})
+
+// BOTÃO DE IR AO FINAL
+
+const botaoFim = document.querySelector(".botao-fim");
+botaoFim.addEventListener('click',fim)
+
+document.addEventListener('scroll', function(){
+    if (window.scrollY == 0) {
+        botaoFim.style.visibility = "visible";
+    } else {
+        botaoFim.style.visibility = "hidden";
+    } 
+})
+
+// FUNÇÕES DE SCROLL
+
+function topo() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function fim() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
