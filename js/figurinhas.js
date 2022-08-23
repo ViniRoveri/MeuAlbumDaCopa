@@ -36,7 +36,7 @@ const selecoes = {
     GHA: [],
     URU: [18],
     KOR: [],
-    ZERO: [],
+    ZERO: [], // '00' PRECISA ESTAR DENTRO DE UMA STRING
     FWC: [],
     C: []
 }
@@ -94,3 +94,23 @@ const zero = document.querySelector('.zero')
 if(zero && Object.entries(selecoes)[32][1].includes('00')){
     zero.classList.add('tenho')
 }
+
+// COMPLETADOS DE CADA SELEÇÃO
+
+for(var i=0;i<=31;i++){
+    var figurinha = Object.entries(selecoes)[i][1].length;
+    var h2s = document.querySelectorAll('.completado');
+    var h2 = h2s[i]
+    h2.textContent = figurinha + '/20'
+}
+
+// COMPLETADOS ESPECIAIS
+
+var totalEspeciais = 0;
+for(var i=32;i<=34;i++){
+    var figurinha = Object.entries(selecoes)[i][1].length;
+    totalEspeciais = totalEspeciais + figurinha
+}
+
+var h2 = document.querySelector('.completado-especiais');
+h2.textContent =  totalEspeciais + '/38'
