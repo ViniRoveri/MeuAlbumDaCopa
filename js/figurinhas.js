@@ -6,39 +6,41 @@ const selecoes = {
     // !!!!! ADICIONAR AS FIGURINHAS AQUI !!!!!
     QAT: [4,8,16],
     ECU: [],
-    SEN: [],
-    NED: [],
+    SEN: [8],
+    NED: [10],
     ENG: [],
-    IRN: [],
+    IRN: [20],
     USA: [],
     WAL: [],
-    ARG: [],
-    KSA: [],
+    ARG: [8],
+    KSA: [13],
     MEX: [],
-    POL: [],
+    POL: [10,16],
     FRA: [],
     AUS: [],
-    DEN: [],
+    DEN: [11],
     TUN: [],
-    ESP: [],
+    ESP: [16],
     CRC: [],
     GER: [],
     JPN: [],
-    BEL: [],
+    BEL: [3],
     CAN: [],
     MAR: [],
-    CRO: [],
+    CRO: [16,17],
     BRA: [],
     SRB: [],
     SUI: [],
     CMR: [],
-    POR: [],
+    POR: [14,17],
     GHA: [],
-    URU: [],
+    URU: [18],
     KOR: [],
+    ZERO: [],
     FWC: [],
     C: []
 }
+
 
 // INFORMA AS FIGURINHAS POR PAÍS
 
@@ -68,8 +70,8 @@ function figurinhas(){
             adiciona(nome2).forEach(function(i){todas.push(i)})
         }
         adiciona(nome).forEach(function(i){todas.push(i)});
-    }
-    
+    }    
+
     return todas
 }
 
@@ -84,4 +86,11 @@ function total(){
     }
 
     return total
+}
+
+// CHECA PELA 00
+
+const zero = document.querySelector('.zero')
+if(zero && Object.entries(selecoes)[32][1].includes('00')){
+    zero.classList.add('tenho')
 }

@@ -64,10 +64,6 @@ a{
     width: 90%;
 }
 
-a:active{
-    outline: none;
-}
-
 .card{
     align-items: center;
     border-radius: 25px;
