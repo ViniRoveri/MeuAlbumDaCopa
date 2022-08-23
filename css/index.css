@@ -1,0 +1,133 @@
+main{
+    padding: 2rem 5%;
+}
+
+.total{
+    margin-bottom: 2rem;
+}
+
+.total h1{
+    color: #222;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.total h2{
+    color: darkgreen;
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.pesquisa input{
+    background: rgb(108,29,69);
+    border: 1px solid rgb(24, 7, 14);
+    border-radius: 30px;
+    color: #eee;
+    font-size: 27px;
+    height: 4rem;
+    max-width: 650px;
+    outline: none;
+    padding: 0 5%;
+    width: 90%;
+}
+
+.pesquisa input::placeholder{
+    color: rgb(207, 119, 163);
+    font-size: 25px;
+}
+
+.selecoes{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+a{
+    text-decoration: none;
+    width: 90%;
+}
+
+.card{
+    align-items: center;
+    border-radius: 25px;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card h1{
+    font-size: 51px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card h2{
+    font-size: 35px; 
+}
+
+.card.red{
+    background: rgb(184, 36, 36);
+    box-shadow: 2px 2px darkred;
+}
+
+.card.green{
+    background: rgb(27, 107, 27);
+    box-shadow: 2px 2px rgb(0, 78, 0);
+}
+
+.card.orange{
+    background: darkorange;
+    box-shadow: 2px 2px orangered; 
+}
+
+.card.yellow{
+    background: rgb(228, 175, 0);
+    box-shadow: 2px 2px rgb(170, 125, 11);
+}
+
+.card.blue{
+    background: rgb(45, 45, 211);
+    box-shadow: 2px 2px rgb(13, 13, 156);  
+}
+
+.card.purple{
+    background: darkmagenta;
+    box-shadow: 2px 2px rgb(100, 0, 100); 
+}
+
+.card.lightblue{
+    background: rgb(82, 163, 196);
+    box-shadow: 2px 2px rgb(48, 89, 107);  
+}
+
+.card.darkgray{
+    background: rgb(48, 48, 48);
+    box-shadow: 2px 2px rgb(24, 24, 24);  
+}
+
+.aviso{
+    color: #222;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.invisivel{
+    display: none
+}

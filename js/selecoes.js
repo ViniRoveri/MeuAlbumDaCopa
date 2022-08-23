@@ -2,7 +2,7 @@
 
 // CONFIGURAÇÃO DE NOMES E CLASSES
 
-const selecao = document.querySelector('.selecao');
+var selecao = document.querySelector('.selecao');
 const cards = document.querySelectorAll('.card');
 for(var i=0;i<cards.length;i++){
     var figurinha = cards[i];
@@ -14,10 +14,7 @@ for(var i=0;i<cards.length;i++){
 
 // LISTA DE FIGURINHAS
 
-const tenho = [
-    // !!!!! ADICIONAR AQUI AS FIGURINHAS !!!!!
-    
-]
+const tenho = figurinhas()
 
 // CHECAGEM
 
@@ -32,6 +29,4 @@ for(var i=0;i<tenho.length;i++){
 // CONTADOR DE CADA SELEÇÃO
 
 var total = document.querySelectorAll('.tenho').length;
-document.querySelector('.total-numero').textContent = total + '/20'
-
-// CONTADOR TOTAL DO ÁLBUM
+document.querySelector('.total-numero').textContent = total + '/'+ selecao.children.length

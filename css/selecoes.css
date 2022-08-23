@@ -19,7 +19,7 @@ main > h1{
     margin-bottom: 2rem;
 }
 
-.card{
+.selecao div{
     align-items: center;
     background: red;
     border-radius: 8px;
