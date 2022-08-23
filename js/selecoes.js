@@ -1,24 +1,5 @@
 'use strict'
 
-function leTexto(){
-    var xhr = new XMLHttpRequest()
-
-    xhr.open('GET', 'figurinhas.txt')
-    xhr.addEventListener('load', function(){
-
-        var resposta = xhr.responseText;
-        console.log(resposta)
-        /*var pacientes = JSON.parse(resposta);
-        pacientes.forEach(function(paciente){
-            adicionaPaciente(paciente)
-        })   */   
-    })
-
-    xhr.send()
-}
-
-leTexto()
-
 // CONFIGURAÇÃO DE NOMES E CLASSES
 
 const selecao = document.querySelector('.selecao');
@@ -33,13 +14,13 @@ for(var i=0;i<cards.length;i++){
 
 // LISTA DE FIGURINHAS
 
-/*const tenho = [
+const tenho = [
     // !!!!! ADICIONAR AQUI AS FIGURINHAS !!!!!
     
-]*/
+]
 
 // CHECAGEM
-/*
+
 for(var i=0;i<tenho.length;i++){
     var nome = tenho[i]
     var checada = document.querySelector(`.${nome}`);
@@ -54,4 +35,3 @@ var total = document.querySelectorAll('.tenho').length;
 document.querySelector('.total-numero').textContent = total + '/20'
 
 // CONTADOR TOTAL DO ÁLBUM
-*/
