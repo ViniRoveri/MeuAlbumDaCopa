@@ -49,7 +49,7 @@ main > h1{
     text-align: center;
 }
 
-.tenho{
+.selecao div.tenho{
     background: green; 
     box-shadow: darkgreen 2px 2px;
 }

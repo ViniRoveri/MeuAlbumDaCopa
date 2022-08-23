@@ -37,4 +37,4 @@ pesquisa.addEventListener('input',function(){
 // CONTADOR TOTAL DO ÁLBUM
 
 const tenho = figurinhas()
-document.querySelector('.total').querySelector('h2').textContent = tenho + '/678'
+document.querySelector('.total').querySelector('h2').textContent = tenho.length + '/678'
