@@ -18,9 +18,9 @@ pesquisa.addEventListener('input',function(){
             var expressao = new RegExp(this.value,'i');
 
             if(expressao.test(nome)||expressao.test(sigla)){
-                card.classList.remove('invisivel')        
+                card.parentNode.classList.remove('invisivel')        
             }else{
-                card.classList.add('invisivel')
+                card.parentNode.classList.add('invisivel')
             }
 
             var chequeClasse = document.querySelectorAll('.invisivel');
@@ -29,7 +29,7 @@ pesquisa.addEventListener('input',function(){
     }else{
         for(var i=0;i<cards.length;i++){
             var card = cards[i];
-            card.classList.remove('invisivel');
+            card.parentNode.classList.remove('invisivel');
         }
     }
 })

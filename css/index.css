@@ -64,6 +64,10 @@ a{
     width: 90%;
 }
 
+a:active{
+    outline: none;
+}
+
 .card{
     align-items: center;
     border-radius: 25px;
@@ -145,6 +149,7 @@ a{
     bottom: 1rem;
     color: #eee;
     cursor: pointer;
+    display: flex;
     font-size: 30px;
     outline: none;
     padding: 1rem;
