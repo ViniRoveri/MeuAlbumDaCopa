@@ -149,7 +149,6 @@ a{
     bottom: 1rem;
     color: #eee;
     cursor: pointer;
-    display: flex;
     font-size: 30px;
     outline: none;
     padding: 1rem;
@@ -157,7 +156,7 @@ a{
     right: 1rem;
     text-align: center;
     visibility: hidden;
-    z-index: 99;
+    z-index: 10;
 }
 
 .invisivel{
