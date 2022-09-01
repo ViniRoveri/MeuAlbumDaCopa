@@ -94,42 +94,42 @@ a{
     font-size: 35px; 
 }
 
-.card.red{
+.red{
     background: rgb(184, 36, 36);
     box-shadow: 2px 2px darkred;
 }
 
-.card.green{
+.green{
     background: rgb(27, 107, 27);
     box-shadow: 2px 2px rgb(0, 78, 0);
 }
 
-.card.orange{
+.orange{
     background: darkorange;
     box-shadow: 2px 2px orangered; 
 }
 
-.card.yellow{
+.yellow{
     background: rgb(221, 169, 0);
     box-shadow: 2px 2px rgb(170, 125, 11);
 }
 
-.card.blue{
+.blue{
     background: rgb(45, 45, 211);
     box-shadow: 2px 2px rgb(13, 13, 156);  
 }
 
-.card.purple{
+.purple{
     background: darkmagenta;
     box-shadow: 2px 2px rgb(100, 0, 100); 
 }
 
-.card.lightblue{
+.lightblue{
     background: rgb(82, 163, 196);
     box-shadow: 2px 2px rgb(48, 89, 107);  
 }
 
-.card.darkgray{
+.darkgray{
     background: rgb(48, 48, 48);
     box-shadow: 2px 2px rgb(24, 24, 24);  
 }
@@ -147,6 +147,7 @@ a{
     border: 1px solid #8b6276;
     border-radius: 30px;
     bottom: 1rem;
+    box-shadow: 0px 0px 10px rgba(48, 2, 24, 0.5);
     color: #eee;
     cursor: pointer;
     font-size: 30px;
