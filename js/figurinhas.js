@@ -114,3 +114,12 @@ for(var i=32;i<=34;i++){
 
 var h2 = document.querySelector('.completado-especiais');
 h2.textContent =  totalEspeciais + '/38'
+
+// NOMEIA TODAS SELECOES PARA BANDEIRAS EM INDEX.JS
+
+const todosCards = document.querySelectorAll('.card');
+for(i=0;i<32;i++){
+    var nome = Object.keys(selecoes)[i];
+    var card = todosCards[i];
+    card.style.backgroundImage = `linear-gradient(-50deg, rgba(24, 7, 14, 0.1), rgba(24, 7, 14, 0.6) 50%),url('img/bandeiras/${nome}.png')`;
+}
