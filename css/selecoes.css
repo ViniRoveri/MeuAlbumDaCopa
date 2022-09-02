@@ -2,6 +2,16 @@ main{
     padding: 2rem 5%;
 }
 
+.bandeira{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 7px #8b6276;
+    margin: 0 auto .55rem;
+    width: 30%;
+}
+
 main > h1{
     color: #eee;
     font-size: 60px;

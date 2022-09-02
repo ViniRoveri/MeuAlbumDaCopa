@@ -30,3 +30,15 @@ for(var i=0;i<tenho.length;i++){
 
 var total = document.querySelectorAll('.tenho').length;
 document.querySelector('.total-numero').textContent = total + '/'+ selecao.children.length
+
+// COLOCA ALTURA NA BANDEIRA
+
+const bandeira = document.querySelector('.bandeira');
+const larguraBandeira = bandeira.clientWidth;
+const alturaBandeira = larguraBandeira/1.5
+bandeira.style.height = alturaBandeira+"px"
+
+// DIZ QUAL É A BANDEIRA
+
+var nomeSelecao = selecao.classList[1];
+bandeira.style.backgroundImage = `url('../img/bandeiras/${nomeSelecao}.png')`;
