@@ -156,6 +156,10 @@ a{
 }
 
 @media(min-width:1440px){
+    .selecoes{
+        justify-content: center;
+    }
+    
     a{
         width: 25%;
     }

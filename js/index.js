@@ -45,7 +45,7 @@ const botaoTopo = document.querySelector(".botao-topo");
 botaoTopo.addEventListener('click',topo)
 
 document.addEventListener('scroll', function(){
-    if (window.scrollY > 500) {
+    if (window.scrollY > 500 && window.scrollY<6400) {
         botaoTopo.style.visibility = "visible";
     } else {
         botaoTopo.style.visibility = "hidden";

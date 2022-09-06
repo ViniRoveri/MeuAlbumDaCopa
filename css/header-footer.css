@@ -38,8 +38,18 @@ footer img{
     width:188px;
 }
 
-footer p:before{
+footer p:nth-child(2)::before{
     content: "© "
+}
+
+.amor, .coracao{
+    vertical-align: middle;
+}
+
+.coracao{
+    height: 18px;
+    margin-bottom: 1px;
+    width: 18px;
 }
 
 main{
