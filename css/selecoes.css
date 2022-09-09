@@ -2,6 +2,14 @@ main{
     padding: 2rem 5%;
 }
 
+.seta-esq{
+    display: inline-block;
+    left: 2%;
+    position: absolute;
+    top: calc(1% + 190px);
+    width: 50px;        
+}
+
 .bandeira{
     background-position: center;
     background-repeat: no-repeat;
