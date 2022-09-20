@@ -1,44 +1,38 @@
 'use strict'
 
-// CONFIGURAÇÃO DE NOMES E CLASSES
+// CONFIGURAÇÃO DE NOMES E CLASSES DAS FIGURINHAS
 
-var selecao = document.querySelector('.selecao');
+const selecao = document.querySelector('.selecao');
+const sigla = selecao.classList[1];
 const cards = document.querySelectorAll('.card');
+
 for(var i=0;i<cards.length;i++){
     var figurinha = cards[i];
-    var classe = selecao.classList[1]+(i+1);
+    var classe = sigla+(i+1);
     figurinha.classList.add(classe);
-    var texto = figurinha.querySelector('p');
-    texto.textContent = classe;
+    figurinha.querySelector('p').textContent = classe;
 }
 
-// LISTA DE FIGURINHAS
+// ARRAY DE FIGURINHAS DO PAÍS
 
-const tenho = figurinhas()
+const tenho = figurinhas();
 
-// CHECAGEM
+// DEIXA AS FIGURINHAS VERDES
 
 for(var i=0;i<tenho.length;i++){
-    var nome = tenho[i]
-    var checada = document.querySelector(`.${nome}`);
-    if(checada){
-        checada.classList.add('tenho');
-    }
+    document.querySelector(`.${tenho[i]}`).classList.add('tenho');
 }
 
-// CONTADOR DE CADA SELEÇÃO
+// CONTADOR DA SELEÇÃO
 
-var total = document.querySelectorAll('.tenho').length;
-document.querySelector('.total-numero').textContent = total + '/'+ selecao.children.length
+document.querySelector('.total-numero').textContent = tenho.length + '/'+ selecao.children.length
 
-// COLOCA ALTURA NA BANDEIRA
+// COLOCA ALTURA NA BANDEIRA (LARGURA ESTÁ NO CSS) & DIZ QUAL É A BANDEIRA
 
 const bandeira = document.querySelector('.bandeira');
-const larguraBandeira = bandeira.clientWidth;
-const alturaBandeira = larguraBandeira/1.5
-bandeira.style.height = alturaBandeira+"px"
+if(bandeira){
+    const larguraBandeira = bandeira.clientWidth;
+    bandeira.style.height = larguraBandeira/1.5+"px"
 
-// DIZ QUAL É A BANDEIRA
-
-var nomeSelecao = selecao.classList[1];
-bandeira.style.backgroundImage = `url('../img/bandeiras/${nomeSelecao}.png')`;
+    bandeira.style.backgroundImage = `url('../img/bandeiras/${sigla}.png')`;
+}

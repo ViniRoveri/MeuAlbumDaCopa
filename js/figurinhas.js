@@ -1,7 +1,5 @@
 'use strict'
 
-// LISTA DE FIGURINHAS
-
 const selecoes = {
     // !!!!! ADICIONAR AS FIGURINHAS AQUI !!!!!
     QAT: [4,8,11,16],
@@ -36,90 +34,106 @@ const selecoes = {
     GHA: [],
     URU: [18],
     KOR: [],
-    ZERO: [], // '00' PRECISA ESTAR DENTRO DE UMA STRING
     FWC: [8,11],
-    C: []
+    C: [],
+    ZERO: [] // PASSAR O '00' ENTRE STRINGS !!!
 }
 
+// CRIA NOME DAS FIGURINHAS DO PAÍS
 
-// INFORMA AS FIGURINHAS POR PAÍS
+function criaNome(sigla){
+    var criadas = []
 
-function adiciona(EXP){
-    var pais = selecoes[EXP]
-    var retorno = []
+    var pais = selecoes[sigla]
     for(var i=0;i<pais.length;i++){
         var numero = pais[i]
-        var figurinha = EXP + numero
-        retorno.push(figurinha)
+        var figurinha = sigla + numero
+        criadas.push(figurinha)
     }
 
-    return retorno
+    return criadas
 }
 
-// INFORMA TODAS AS FIGURINHAS DA PÁGINA
+// CRIA ARRAY COM TODAS AS FIGURINHAS DO PAÍS
 
 function figurinhas(){
     var todas = []
 
-    var selecoes = document.querySelectorAll('.selecao');
-    for(var i=0;i<selecoes.length;i++){
-        var selecao = selecoes[i];
-        var nome = selecao.classList[1];
-        if(selecao.classList.length===3){
-            var nome2 = selecao.classList[2];
-            adiciona(nome2).forEach(function(i){todas.push(i)})
-        }
-        adiciona(nome).forEach(function(i){todas.push(i)});
-    }    
+    criaNome(sigla).forEach(i=>todas.push(i));
+
+    if(selecao.classList.length===3){
+        var nome2 = selecao.classList[2];
+        criaNome(nome2).forEach(i=>todas.push(i))
+        if(temZero){todas.push('zero')}
+    }
 
     return todas
 }
 
-// CALCULA O TOTAL DE FIGURINHAS
+// CALCULA O TOTAL GERAL DE FIGURINHAS
 
 function total(){
     var total = 0;
 
-    for(var i=0;i<Object.entries(selecoes).length;i++){
-        var pais = Object.entries(selecoes)[i][1].length;
-        total = total + pais
+    for(var i=0;i<Object.entries(selecoes).length-1;i++){
+        var totalPais = Object.values(selecoes)[i].length;
+        total += totalPais
     }
+
+    if(temZero){total++}
 
     return total
 }
 
 // CHECA PELA 00
 
-const zero = document.querySelector('.zero')
-if(zero && Object.entries(selecoes)[32][1].includes('00')){
-    zero.classList.add('tenho')
+const figurinhaZero = document.querySelector('.zero');
+const lugarDaZero = selecoes['ZERO'][0];
+var temZero = false
+if(lugarDaZero === '00'){
+    temZero = true;
+    if(figurinhaZero){
+        figurinhaZero.classList.add('tenho');
+    }
 }
 
-// COMPLETADOS DE CADA SELEÇÃO
+// CHECA SE ESTÁ NO INDEX
 
-for(var i=0;i<=31;i++){
-    var figurinha = Object.entries(selecoes)[i][1].length;
-    var h2s = document.querySelectorAll('.completado');
-    var h2 = h2s[i]
-    h2.textContent = figurinha + '/20'
+var estaNoIndex = false;
+if(document.getElementById('index')){estaNoIndex=true}
+
+// COMPLETADOS DE CADA SELEÇÃO EM INDEX.JS
+
+if(estaNoIndex){
+    const h2Completadas = document.querySelectorAll('.completado');
+
+    for(var i=0;i<32;i++){
+        var figurinhasDoPais = Object.values(selecoes)[i].length;
+        var h2Atual = h2Completadas[i]
+        h2Atual.textContent = figurinhasDoPais + '/20'
+    }
 }
 
-// COMPLETADOS ESPECIAIS
+// COMPLETADOS DAS ESPECIAIS EM INDEX.JS
 
-var totalEspeciais = 0;
-for(var i=32;i<=34;i++){
-    var figurinha = Object.entries(selecoes)[i][1].length;
-    totalEspeciais = totalEspeciais + figurinha
+if(estaNoIndex){
+    var totalEspeciais = 0;
+
+    for(var i=32;i<=34;i++){
+        var figurinhasDaLinha = Object.values(selecoes)[i].length;
+        totalEspeciais += figurinhasDaLinha
+    }
+
+    document.querySelector('.completado-especiais').textContent = totalEspeciais+'/38'
 }
-
-var h2 = document.querySelector('.completado-especiais');
-h2.textContent =  totalEspeciais + '/38'
 
 // NOMEIA TODAS SELECOES PARA BANDEIRAS EM INDEX.JS
 
-const todosCards = document.querySelectorAll('.card');
-for(i=0;i<32;i++){
-    var nome = Object.keys(selecoes)[i];
-    var card = todosCards[i];
-    card.style.backgroundImage = `linear-gradient(-50deg, rgba(24, 7, 14, 0.1), rgba(24, 7, 14, 0.6) 50%),url('img/bandeiras/${nome}.png')`;
+if(estaNoIndex){
+    const cards = document.querySelectorAll('.card');
+    for(i=0;i<32;i++){
+        var nome = Object.keys(selecoes)[i];
+        var card = cards[i];
+        card.style.backgroundImage = `linear-gradient(-50deg, rgba(24, 7, 14, 0.1), rgba(24, 7, 14, 0.6) 50%),url('img/bandeiras/${nome}.png')`;
+    }
 }

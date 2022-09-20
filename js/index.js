@@ -10,10 +10,8 @@ pesquisa.addEventListener('input',function(){
     if(this.value.length>0){
         for(var i=0;i<cards.length;i++){       
             var card = cards[i];
-            var cardH1 = card.querySelector('h1');
-            var cardH2 = card.querySelector('h2');
-            var nome = cardH1.textContent;
-            var sigla = cardH2.textContent;
+            var nome = card.querySelector('h1').textContent;
+            var sigla = card.querySelector('h2').textContent;
             
             var expressao = new RegExp(this.value,'i');
 
@@ -44,10 +42,10 @@ document.querySelector('.total').querySelector('h2').textContent = tenho + '/678
 const botaoTopo = document.querySelector(".botao-topo");
 botaoTopo.addEventListener('click',topo)
 
-document.addEventListener('scroll', function(){
-    if (window.scrollY > 500 && window.scrollY<6400) {
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY>500 && window.scrollY<6400){
         botaoTopo.style.visibility = "visible";
-    } else {
+    }else{
         botaoTopo.style.visibility = "hidden";
     } 
 })
@@ -57,10 +55,10 @@ document.addEventListener('scroll', function(){
 const botaoFim = document.querySelector(".botao-fim");
 botaoFim.addEventListener('click',fim)
 
-document.addEventListener('scroll', function(){
-    if (window.scrollY == 0) {
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY == 0){
         botaoFim.style.visibility = "visible";
-    } else {
+    }else{
         botaoFim.style.visibility = "hidden";
     } 
 })
