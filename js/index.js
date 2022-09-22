@@ -78,3 +78,33 @@ function fim() {
         behavior: "smooth"
     });
 }
+
+// COMPLETADOS DE CADA SELEÇÃO
+
+const h2Completadas = document.querySelectorAll('.completado');
+
+for(var i=0;i<32;i++){
+    var figurinhasDoPais = Object.values(selecoes)[i].length;
+    var h2Atual = h2Completadas[i]
+    h2Atual.textContent = figurinhasDoPais + '/20'
+}
+
+// COMPLETADOS DAS ESPECIAIS
+
+var totalEspeciais = 0;
+
+for(var i=32;i<=34;i++){
+    var figurinhasDaLinha = Object.values(selecoes)[i].length;
+    totalEspeciais += figurinhasDaLinha
+}
+
+document.querySelector('.completado-especiais').textContent = totalEspeciais+'/38';
+
+// COLOCA BANDEIRAS NOS CARDS
+
+for(var i=0;i<32;i++){
+    var nome = Object.keys(selecoes)[i];
+    var card = cards[i];
+    card.style.backgroundImage = `linear-gradient(-50deg, rgba(24, 7, 14, 0.1), rgba(24, 7, 14, 0.6) 50%),url('img/bandeiras/${nome}.png')`;
+}
+
