@@ -96,4 +96,3 @@ if(lugarDaZero === '00'){
         figurinhaZero.classList.add('tenho');
     }
 }
-//TESTE
